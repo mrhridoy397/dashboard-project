@@ -1,14 +1,28 @@
-
 <?php
 require_once('./partials/header.php');
 ?>
+<section class="bradcrumb py-3 bg-dark">
+			<div class="text-center py-3 ">
+				<p>
+					<a href="index.php" class=" text-light">Home /</a>
+					<a href="deshboard.php" class=" primary_color">Dashboard</a>
+				</p>
+			</div>
+		</section>
 
 <section class="dashboard">
     <div class="container">
         <div class="row">
             <div class="col-md-4 pt-5">
                 <div class="card s-bf py-1 rounded-0">
-                    <h5 class="text-light ml-2 mt-2">Total Product</h5>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2">Total Product</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2 md-l">0</h5>
+                        </div>
+                    </div>
                 </div>
                 <div class="card mt-5">
                     <div class="bg-success py-3">
@@ -24,13 +38,27 @@ require_once('./partials/header.php');
                 </div>
             </div>
             <div class="col-md-4 pt-5">
-            <div class="card f-bg py-1 rounded-0">
-                    <h5 class="text-light ml-2 mt-2">Low Stock</h5>
+                <div class="card f-bg py-1 rounded-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2">Low Stock</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2 md-l">0</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-md-4 pt-5">
-            <div class="card b-bg py-1 rounded-0">
-                    <h5 class="text-light ml-2 mt-2">Total Orders</h5>
+                <div class="card b-bg py-1 rounded-0">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2">Total Orders</h5>
+                        </div>
+                        <div class="col-md-6">
+                            <h5 class="text-light ml-2 mt-2 md-l">0</h5>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
