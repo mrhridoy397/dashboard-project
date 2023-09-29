@@ -1,19 +1,18 @@
 <?php
-require_once('./partials/header.php');
+include_once('./partials/header.php')
 ?>
-
-<section class="bradcrumb py-3 bg-dark">
-			<div class="text-center py-3 ">
-				<p>
-					<a href="index.php" class=" text-light">Home /</a>
-					<a href="deshboard.php" class=" primary_color">Dashboard</a>
-				</p>
-			</div>
-		</section>
+    <!-- Breadcump Start -->
+    <section>
+        <div class="breadcump shadow">
+            <h6 class="text-light mt-2"> <a href="dashboard.php">Dashboard</a><span class="text-first text-light"> / Report </span></h6>
+        </div>
+    </section>
+    <!-- Breadcump End -->
 
 
 
 
-<?php
-require_once('./partials/footer.php');
-?>
+
+    <?php 
+    include_once('./partials/footer.php')
+    ?>

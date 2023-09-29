@@ -1,19 +1,41 @@
-<?php
-require_once('./partials/header.php');
-?>
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="bradcrumb py-3 bg-dark">
-			<div class="text-center py-3 ">
-				<p>
-					<a href="index.php" class=" text-light">Home /</a>
-					<a href="deshboard.php" class=" primary_color">Dashboard</a>
-				</p>
-			</div>
-		</section>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | ims</title>
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+</head>
 
+<body>
+    <section class="vh-100" style="background-color: #508bfc;">
+        <div class="container py-5 h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+                    <div class="card shadow-2-strong p-2" style="border-radius: 1rem;">
+                        <div class="card-body p-5 text-center">
 
+                            <h3 class="mb-5">Sign in</h3>
+                            <form action="" method="post">
+                                <div class="form-outline mb-4">
+                                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                                    <!-- <label class="form-label" for="typeEmailX-2">Email</label> -->
+                                </div>
 
+                                <div class="form-outline mb-4">
+                                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                                    <!-- <label class="form-label" for="typePasswordX-2">Password</label> -->
+                                </div>
+                                <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+                            </form>
+                        </div>
+                        <a href="#" class="text-right">Forgate Password</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
 
-<?php
-require_once('./partials/footer.php');
-?>
+</html>
