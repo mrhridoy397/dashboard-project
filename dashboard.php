@@ -1,6 +1,6 @@
     
     <?php 
-    include_once('./partial/header.php')
+    include_once('./partials/header.php')
     ?>
     <!-- quantity section start -->
     <section>
@@ -91,5 +91,5 @@
     <!-- revenew section end -->
 
 <?php
-include_once('./partial/footer.php')
+include_once('./partials/footer.php')
 ?>

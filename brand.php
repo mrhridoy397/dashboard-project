@@ -7,7 +7,7 @@ include_once('./partials/header.php')
 <!-- Breadcump Start -->
 <section>
     <div class="breadcump shadow">
-        <h6 class="text-light mt-2"> <a href="dashboard.php">Dashboard</a><span class="text-first text-light"> / Brand
+        <h6 class="text-light mt-2"> <a href="dashboard.php" class="text-dark">Dashboard</a><span class="text-first text-light"> / Brand
             </span></h6>
     </div>
 </section>

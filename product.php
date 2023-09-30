@@ -4,7 +4,7 @@ include_once('./partials/header.php')
 <!-- Breadcump Start -->
 <section>
     <div class="breadcump shadow">
-        <h6 class="text-light mt-2"> <a href="dashboard.php">Dashboard</a><span class="text-first text-light"> / Product </span></h6>
+        <h6 class="text-light mt-2"> <a href="dashboard.php" class="text-dark">Dashboard</a><span class="text-first text-light"> / Product </span></h6>
     </div>
 </section>
 <!-- Breadcump End -->
@@ -54,7 +54,7 @@ include_once('./partials/header.php')
     <!-- </div> -->
 </section>
 
-<!-- Add Category -->
+<!-- Add product -->
 <div class="modal fade" id="addProductModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
@@ -72,9 +72,11 @@ include_once('./partials/header.php')
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <img src="" alt="">
+                                <img src="assets/img/blog2.png" alt="" class="img-thumbnail" height="100px" width="150px">
                                 <small class="product_img_msg"></small>
                             </div>
+                            <a href="" class="btn btn-info btn-sm" data-toggle="modal"><i class="fa fa-times" aria-hidden="true"></i></a>
+                            <a href="" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-file" aria-hidden="true"></i></a>
                         </div>
                     </div>
                     <div class="row">
@@ -85,8 +87,8 @@ include_once('./partials/header.php')
                             <div class="form-group">
                                 <select name="product_name" id="product_name" class="form-control">
                                     <option value="">~~SELECT~~</option>
-                                    <option value="0">Deactive</option>
-                                    <option value="1">Active</option>
+                                    <option value="">Halal</option>
+                                    <option value="">modon</option>
                                 </select>
                                 <small class="product_name_msg"></small>
                             </div>
@@ -125,7 +127,7 @@ include_once('./partials/header.php')
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-4">
                             <label for="total_amoun">M.R.P :</label>

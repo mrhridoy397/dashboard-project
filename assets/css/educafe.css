@@ -19,9 +19,9 @@ a{
 a:hover{
     text-decoration: none;
 }
-::placeholder{
-    color: #ffffff !important;
-}
+/* ::placeholder{
+    color: #ffffff58 !important;
+} */
 /*************************************************************
 Base css end
 ***************************************************************/

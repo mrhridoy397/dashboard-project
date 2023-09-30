@@ -37,7 +37,7 @@
     <!-- navbar Start -->
     <nav class="navbar navbar-expand-lg nav-bg-educafe shadow">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="./assets/img/logo/logo-light.png" alt="!" class="img-fluid"></a>
+            <a class="navbar-brand" href="#"><img src="./assets/img/logo-dark.png" alt="!" class="img-fluid"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -76,9 +76,11 @@
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
+                            <a class="dropdown-item" href="settings.php"><i class="fa fa-cog" aria-hidden="true"></i> Settings</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                            <a class="dropdown-item" href="user.php"><i class="fa fa-wrench" aria-hidden="true"></i> Add User</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
                         </div>
                     </li>
                 </ul>

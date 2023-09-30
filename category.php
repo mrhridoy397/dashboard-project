@@ -4,7 +4,7 @@ include_once('./partials/header.php')
     <!-- Breadcump Start -->
     <section>
         <div class="breadcump shadow">
-            <h6 class="text-light mt-2"> <a href="dashboard.php">Dashboard</a><span class="text-first text-light"> / Category </span></h6>
+            <h6 class="text-light mt-2"> <a href="dashboard.php" class="text-dark">Dashboard</a><span class="text-first text-light"> / Category </span></h6>
         </div>
     </section>
     <!-- Breadcump End -->
@@ -127,7 +127,7 @@ include_once('./partials/header.php')
                         <label for="categories_status">Category Status <span class="text-danger">*</span></label>
                         <select name="categories_status" id="categories_status" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <<option value="0">Available</option>
+                            <option value="0">Available</option>
                                 <option value="1">Not Available</option>
                         </select>
                         <small class="categories_status_msg"></small>
