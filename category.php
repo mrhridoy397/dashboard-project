@@ -1,21 +1,22 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
-    <!-- Breadcump Start -->
-    <section>
-        <div class="breadcump shadow">
-            <h6 class="text-light mt-2"> <a href="dashboard.php" class="text-dark">Dashboard</a><span class="text-first text-light"> / Category </span></h6>
-        </div>
-    </section>
-    <!-- Breadcump End -->
-    <section>
+<!-- Breadcump Start -->
+<section>
+    <div class="breadcump shadow">
+        <h6 class="text-light mt-2"> <a href="dashboard.php" class="text-dark">Dashboard</a><span class="text-first text-light"> / Category </span></h6>
+    </div>
+</section>
+<!-- Breadcump End -->
+<section>
     <div class="container">
         <div class="col-md-12">
             <div class="card mt-4">
                 <div class="card-header d-flex justify-content-between">
                     <div class=""><i class="fa fa-pencil-square-o fs-w" aria-hidden="true"></i> Manage Category</div>
-                    <a href="#addCategoryModal" class="btn shadow brand_b" data-toggle="modal"><i
-                            class="fa fa-plus-circle"></i> Add Category</a>
+                    <a href="#addCategoryModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add Category</a>
                 </div>
                 <div class="card-body">
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -40,7 +41,7 @@ include_once('./partials/header.php')
                                 </td>
                             </tr>
                         </tbody>
-                       
+
                     </table>
                 </div>
             </div>
@@ -62,8 +63,7 @@ include_once('./partials/header.php')
                 <form method="post">
                     <div class="form-group">
                         <label for="categories_name">Category Name <span class="text-danger">*</span></label>
-                        <input type="text" name="categories_name" id="categories_name" class="form-control"
-                            placeholder="Category Name">
+                        <input type="text" name="categories_name" id="categories_name" class="form-control" placeholder="Category Name">
                         <small class="categories_name_msg"></small>
                     </div>
                     <div class="form-group">
@@ -109,8 +109,7 @@ include_once('./partials/header.php')
                 <form method="post">
                     <div class="form-group">
                         <label for="categories_name">Category Name <span class="text-danger">*</span></label>
-                        <input type="text" name="categories_name" id="categories_name" class="form-control"
-                            placeholder="Category Name">
+                        <input type="text" name="categories_name" id="categories_name" class="form-control" placeholder="Category Name">
                         <small class="categories_name_msg"></small>
                     </div>
                     <div class="form-group">
@@ -128,7 +127,7 @@ include_once('./partials/header.php')
                         <select name="categories_status" id="categories_status" class="form-control">
                             <option value="">~~SELECT~~</option>
                             <option value="0">Available</option>
-                                <option value="1">Not Available</option>
+                            <option value="1">Not Available</option>
                         </select>
                         <small class="categories_status_msg"></small>
                     </div>
@@ -165,10 +164,10 @@ include_once('./partials/header.php')
 </div>
 
 <script>
-new DataTable('#example');
+    new DataTable('#example');
 </script>
 
 
-    <?php 
-    include_once('./partials/footer.php')
-    ?>
+<?php
+include_once('./partials/footer.php')
+?>

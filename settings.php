@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
 <!-- Breadcump Start -->

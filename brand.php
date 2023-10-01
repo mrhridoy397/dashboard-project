@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
 
@@ -18,8 +20,7 @@ include_once('./partials/header.php')
             <div class="card mt-4">
                 <div class="card-header d-flex justify-content-between">
                     <div class=""><i class="fa fa-pencil-square-o fs-w" aria-hidden="true"></i> Manage Brand</div>
-                    <a href="#addBandModal" class="btn shadow brand_b" data-toggle="modal"><i
-                            class="fa fa-plus-circle"></i> Add Brand</a>
+                    <a href="#addBandModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add Brand</a>
                 </div>
                 <div class="card-body">
                     <table id="example" class="table table-striped table-bordered" style="width:100%">
@@ -44,7 +45,7 @@ include_once('./partials/header.php')
                                 </td>
                             </tr>
                         </tbody>
-                       
+
                     </table>
                 </div>
             </div>
@@ -66,8 +67,7 @@ include_once('./partials/header.php')
                 <form method="post">
                     <div class="form-group">
                         <label for="brandname">Brand Name <span class="text-danger">*</span></label>
-                        <input type="text" name="brandname" id="brandname" class="form-control"
-                            placeholder="Brand Name">
+                        <input type="text" name="brandname" id="brandname" class="form-control" placeholder="Brand Name">
                         <small class="bandname_msg"></small>
                     </div>
                     <div class="form-group">
@@ -112,8 +112,7 @@ include_once('./partials/header.php')
                 <form method="post">
                     <div class="form-group">
                         <label for="brandname">Brand Name <span class="text-danger">*</span></label>
-                        <input type="text" name="brandname" id="brandname" class="form-control"
-                            placeholder="Brand Name">
+                        <input type="text" name="brandname" id="brandname" class="form-control" placeholder="Brand Name">
                         <small class="bandname_msg"></small>
                     </div>
                     <div class="form-group">
@@ -165,7 +164,7 @@ include_once('./partials/header.php')
     </div>
 </div>
 <script>
-new DataTable('#example');
+    new DataTable('#example');
 </script>
 <?php
 include_once('./partials/footer.php');

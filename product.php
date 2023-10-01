@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
 <!-- Breadcump Start -->
@@ -34,18 +36,6 @@ include_once('./partials/header.php')
                             <th>Options</th>
                         </tr>
                     </thead>
-                    <!-- <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="#editProductModal" class="btn btn-info btn-sm" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                    <a href="#deleteProductModal" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                        </tbody> -->
 
                 </table>
             </div>

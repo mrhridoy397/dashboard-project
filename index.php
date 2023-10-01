@@ -1,3 +1,51 @@
+<?php
+// error_reporting(0);
+require_once('./api/db_con.php');
+session_start();
+if (isset($_SESSION['userId']) && $_SESSION['userId'] != "") {
+    header("location:http://localhost/inventory/dashboard.php");
+}
+$errors = array();
+if (($_REQUEST)) {
+    $user = $_REQUEST['username'];
+    $pass = $_REQUEST['password'];
+    // validation
+    if (empty($user) || empty($pass)) {
+        if ($user == "") {
+            $errors[] = "This Username is required";
+        }
+        if ($pass == "") {
+            $errors[] = "This Password is required";
+        }
+    } else {
+        $sql = "SELECT * FROM users WHERE username = '$user'";
+        $result = $con->query($sql);
+        // chak data matching
+        if ($result->num_rows > 0) {
+            $password = md5($pass);
+            $sql = "SELECT * FROM users WHERE username = '$user' AND password = '$password'";
+            $result = $con->query($sql);
+            // chak data matching
+            if ($result->num_rows > 0) {
+                $value = $result->fetch_assoc();
+                $userId = $value['user_id'];
+                $username = $value['username'];
+                // session load
+                $_SESSION['userId'] = $userId;
+                $_SESSION['username'] = $username;
+                header("location:http://localhost/inventory/dashboard.php");
+            } else {
+                $errors[] = "Incorrent username/password combination";
+            }
+        } else {
+            $errors[] = "username doesnot exists";
+        }
+    }
+}
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,16 +63,25 @@
                 <div class="col-12 col-md-8 col-lg-6 col-xl-5">
                     <div class="card shadow-2-strong p-2" style="border-radius: 1rem;">
                         <div class="card-body p-5 text-center">
-
                             <h3 class="mb-5">Sign in</h3>
-                            <form action="" method="post">
+                            <div class="massage">
+                                <?php
+                                if ($errors) {
+                                    foreach ($errors as $key => $value) {
+                                        echo '<div class="alert alert-warning" role="alert"> <i class="glyphicon glyphicon-exclamation-sign"></i>' .$value. '</div>';
+                                    }
+                                }
+
+                                ?>
+                            </div>
+                            <form action="<?php echo $_SERVER['PHP_SELF'] ?>" method="post">
                                 <div class="form-outline mb-4">
-                                    <input type="email" id="typeEmailX-2" class="form-control form-control-lg" />
+                                    <input type="text" id="typeEmailX-2" name="username" class="form-control form-control-lg" autocomplete="off"  />
                                     <!-- <label class="form-label" for="typeEmailX-2">Email</label> -->
                                 </div>
 
                                 <div class="form-outline mb-4">
-                                    <input type="password" id="typePasswordX-2" class="form-control form-control-lg" />
+                                    <input type="password" id="typePasswordX-2" name="password" class="form-control form-control-lg" autocomplete="off" />
                                     <!-- <label class="form-label" for="typePasswordX-2">Password</label> -->
                                 </div>
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>

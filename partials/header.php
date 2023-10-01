@@ -80,7 +80,7 @@
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="user.php"><i class="fa fa-wrench" aria-hidden="true"></i> Add User</a>
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="index.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
+                            <a class="dropdown-item" href="logout.php"><i class="fa fa-sign-out" aria-hidden="true"></i> Logout</a>
                         </div>
                     </li>
                 </ul>

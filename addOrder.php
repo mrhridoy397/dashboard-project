@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
 
@@ -262,15 +264,15 @@ include_once('./partials/header.php')
                             </div>
                         </div>
                     </div>
-                    <div class = "mt-3 mb-4 align-center">
+                    <div class="mt-3 mb-4 align-center">
                         <a href="#addBandModal" class="btn shadow"><i class="fa fa-plus-circle"></i> Add Row</a>
                         <button type="button" class="btn shadow btn-success"><i class="fa fa-check-circle" aria-hidden="true"></i> Save Change</button>
                         <button type="button" class="btn shadow btn-info" data-dismiss="modal"><i class="fa fa-exchange" aria-hidden="true"></i> Reset</button>
                     </div>
                 </div>
-                </div>
             </div>
         </div>
+    </div>
     </div>
 </section>
 

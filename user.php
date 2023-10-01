@@ -1,4 +1,6 @@
 <?php
+session_start();
+require_once('./api/core.php');
 include_once('./partials/header.php')
 ?>
 
@@ -12,49 +14,48 @@ include_once('./partials/header.php')
 <!-- Breadcump End -->
 
 <div class="container">
-        <div class="col-md-12">
-            <div class="card mt-4">
-                <div class="card-header d-flex justify-content-between">
-                    <div class=""><i class="fa fa-pencil-square-o fs-w" aria-hidden="true"></i> Manage User</div>
-                    <a href="#addUserModal" class="btn shadow brand_b" data-toggle="modal"><i
-                            class="fa fa-plus-circle"></i> Add User</a>
-                </div>
-                <div class="card-body">
-                    <table id="example" class="table table-striped " style="width:100%">
-                        <thead>
-                            <tr>
-                                <th>User Name</th>
-                                <th></th>
-                                <th>Admin</th>
-                                <th></th>
-                                <th></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                <button type="button" class="btn "> 
+    <div class="col-md-12">
+        <div class="card mt-4">
+            <div class="card-header d-flex justify-content-between">
+                <div class=""><i class="fa fa-pencil-square-o fs-w" aria-hidden="true"></i> Manage User</div>
+                <a href="#addUserModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add User</a>
+            </div>
+            <div class="card-body">
+                <table id="example" class="table table-striped " style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>User Name</th>
+                            <th></th>
+                            <th>Admin</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+                                <button type="button" class="btn ">
                                     <select name="#exampleModalLabel" id="exampleModalLabel">
-                                    <option value="">Action</option>
+                                        <option value="">Action</option>
                                         <option value=""><a href="#editUserModal" class="btn btn-info btn-sm" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>Edit</a></option>
                                         <option value=""><a href="#deleteUserModal" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-trash" aria-hidden="true"></i>Remove</a></option>
                                     </select>
                                 </button>
-                                </td>
-                                <td></td>
-                                <td></td>
-                            </tr>
-                        </tbody>
-                       
-                    </table>
-                </div>
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+
+                </table>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Add User -->
+<!-- Add User -->
 <div class="modal fade" id="addUserModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
@@ -72,33 +73,33 @@ include_once('./partials/header.php')
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" name="username" id="username" class="form-control" placeholder="Product Attribute">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="User Name">
                                 <small class="User_name_msg"></small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="row">
                         <div class="col-md-4">
                             <label for="password">Password:</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" name="password" id="password" class="form-control" placeholder="Product Attribute">
+                                <input type="text" name="password" id="password" class="form-control" placeholder="Password">
                                 <small class="password_msg"></small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="row">
                         <div class="col-md-4">
                             <label for="email">Email:</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="email" name="email" id="email" class="form-control" placeholder="Product Attribute">
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Email">
                                 <small class="email_msg"></small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info">Save Change</button>
@@ -109,8 +110,8 @@ include_once('./partials/header.php')
     </div>
 </div>
 
-    <!-- Edit User -->
-    <div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-hidden="true">
+<!-- Edit User -->
+<div class="modal fade" id="editUserModal" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -127,22 +128,22 @@ include_once('./partials/header.php')
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" name="username" id="username" class="form-control" placeholder="Product Attribute">
+                                <input type="text" name="username" id="username" class="form-control" placeholder="User Name">
                                 <small class="User_name_msg"></small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
                     <div class="row">
                         <div class="col-md-4">
                             <label for="password">Password:</label>
                         </div>
                         <div class="col-md-8">
                             <div class="form-group">
-                                <input type="text" name="password" id="password" class="form-control" placeholder="Product Attribute">
+                                <input type="text" name="password" id="password" class="form-control" placeholder="Password">
                                 <small class="password_msg"></small>
                             </div>
                         </div>
-                    </div> 
+                    </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-info">Save Change</button>
@@ -159,7 +160,7 @@ include_once('./partials/header.php')
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Add User</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -176,7 +177,7 @@ include_once('./partials/header.php')
 </div>
 
 <script>
-new DataTable('#example');
+    new DataTable('#example');
 </script>
 
 

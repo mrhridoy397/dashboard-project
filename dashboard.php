@@ -1,11 +1,18 @@
     
     <?php 
+    session_start();
+    require_once('./api/core.php');
     include_once('./partials/header.php')
     ?>
     <!-- quantity section start -->
     <section>
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center pt-3">
+                        <b>Welcome - </b><?php echo $_SESSION['username']; ?>
+                    </p>
+                </div>
                 <div class="col-md-4 mt-3">
                     <div class="product">
                         <div class="row">
