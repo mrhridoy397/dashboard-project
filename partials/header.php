@@ -16,9 +16,7 @@
     <!-- Animate css -->
     <link rel="stylesheet" href="./assets/css/animate.min.css">
     <!-- google fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,600;1,700&display=swap"
-        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,800;1,300;1,600;1,700&display=swap" rel="stylesheet">
     <!-- mignific popup -->
     <link rel="stylesheet" href="./assets/css/magnific-popup.css">
     <!-- Fontawesome 4.7 -->
@@ -28,9 +26,10 @@
     <!-- theme responsive -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
 
-    <script src="./assets/js/jquery-3.5.1.slim.min.js"></script>
-    <script src="./assets/js/dataTables.bootstrap4.min.js"></script>
+    <script src="./assets/js/jquery.min.js"></script>
     <script src="./assets/js/dataTables.min.js"></script>
+    <script src="./assets/js/dataTables.bootstrap4.min.js"></script>
+
 </head>
 
 <body>
@@ -38,8 +37,7 @@
     <nav class="navbar navbar-expand-lg nav-bg-educafe shadow">
         <div class="container">
             <a class="navbar-brand" href="#"><img src="./assets/img/logo-dark.png" alt="!" class="img-fluid"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -57,8 +55,7 @@
                         <a class="nav-link fs-w" href="product.php"><i class="fa fa-rub fs-w" aria-hidden="true"></i> Product</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fs-w" href="order.php" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        <a class="nav-link dropdown-toggle fs-w" href="order.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             Order
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -71,8 +68,7 @@
                         <a class="nav-link fs-w" href="report.php"><i class="fa fa-check-square-o" aria-hidden="true"></i> Report</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle fs-w" href="order.php" id="navbarDropdown" role="button"
-                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle fs-w" href="order.php" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="fa fa-user" aria-hidden="true"></i>
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">

@@ -23,29 +23,16 @@ include_once('./partials/header.php')
                     <a href="#addBandModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add Brand</a>
                 </div>
                 <div class="card-body">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <table id="ManageBrandTable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Brand Name</th>
+                                <th>Brand</th>
                                 <th>isActive</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="#editBandModal" class="btn btn-info btn-sm" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                    <a href="#deleteBandModal" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-
                     </table>
                 </div>
             </div>
@@ -64,7 +51,8 @@ include_once('./partials/header.php')
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post">
+                <div id="add-brand-messages"></div>
+                <form method="POST" id="submitBrandForm" action="./api/brand.php">
                     <div class="form-group">
                         <label for="brandname">Brand Name <span class="text-danger">*</span></label>
                         <input type="text" name="brandname" id="brandname" class="form-control" placeholder="Brand Name">
@@ -84,15 +72,15 @@ include_once('./partials/header.php')
                         <label for="status">Brand Status <span class="text-danger">*</span></label>
                         <select name="status" id="status" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <<option value="0">Available</option>
-                                <option value="1">Not Available</option>
+                            <<option value="1">Available</option>
+                                <option value="0">Not Available</option>
                         </select>
                         <small class="status_msg"></small>
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-info">Save Change</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="createBrandBtn" data-loding-text="Loading" autocomplete="off">Save Change</button>
             </div>
             </form>
         </div>
@@ -164,8 +152,9 @@ include_once('./partials/header.php')
     </div>
 </div>
 <script>
-    new DataTable('#example');
+    // new DataTable('#example');
 </script>
+<script src="./app/brand.js"></script>
 <?php
 include_once('./partials/footer.php');
 ?>

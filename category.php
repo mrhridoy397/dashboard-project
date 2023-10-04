@@ -19,29 +19,16 @@ include_once('./partials/header.php')
                     <a href="#addCategoryModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add Category</a>
                 </div>
                 <div class="card-body">
-                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                <table id="ManageCategoryTable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>SL</th>
-                                <th>Category Name</th>
+                                <th>Category</th>
                                 <th>isActive</th>
                                 <th>Status</th>
-                                <th>Action</th>
+                                <th>Options</th>
                             </tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td>
-                                    <a href="#editCategoryModal" class="btn btn-info btn-sm" data-toggle="modal"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></a>
-                                    <a href="#deleteCategoryModal" class="btn btn-danger btn-sm" data-toggle="modal"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                                </td>
-                            </tr>
-                        </tbody>
-
                     </table>
                 </div>
             </div>
@@ -60,34 +47,35 @@ include_once('./partials/header.php')
                 </button>
             </div>
             <div class="modal-body">
-                <form method="post">
+            <div id="add-Category-messages"></div>
+                <form method="post" id="submitCategoryForm" action="./api/category.php">
                     <div class="form-group">
-                        <label for="categories_name">Category Name <span class="text-danger">*</span></label>
-                        <input type="text" name="categories_name" id="categories_name" class="form-control" placeholder="Category Name">
-                        <small class="categories_name_msg"></small>
+                        <label for="categoryname">Category Name <span class="text-danger">*</span></label>
+                        <input type="text" name="categoryname" id="categoryname" class="form-control" placeholder="Category Name">
+                        <small class="categories_msg"></small>
                     </div>
                     <div class="form-group">
-                        <label for="categories_active">Category Active <span class="text-danger">*</span></label>
-                        <select name="categories_active" id="categories_active" class="form-control">
+                        <label for="isActive">Category Active <span class="text-danger">*</span></label>
+                        <select name="isActive" id="isActive" class="form-control">
                             <option value="">~~SELECT~~</option>
                             <option value="0">Deactive</option>
                             <option value="1">Active</option>
                         </select>
-                        <small class="categories_active_msg"></small>
+                        <small class="categories_msg"></small>
                     </div>
                     <div class="form-group">
-                        <label for="categories_status">Category Status <span class="text-danger">*</span></label>
-                        <select name="categories_status" id="categories_status" class="form-control">
+                        <label for="status">Category Status <span class="text-danger">*</span></label>
+                        <select name="status" id="status" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <<option value="0">Available</option>
-                                <option value="1">Not Available</option>
+                            <<option value="1">Available</option>
+                                <option value="0">Not Available</option>
                         </select>
-                        <small class="categories_status_msg"></small>
+                        <small class="categories_msg"></small>
                     </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-info">Save Change</button>
                 <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                <button type="submit" class="btn btn-primary" id="createCategoryBtn" data-loding-text="Loading" autocomplete="off">Save Change</button>
             </div>
             </form>
         </div>
@@ -164,8 +152,9 @@ include_once('./partials/header.php')
 </div>
 
 <script>
-    new DataTable('#example');
+    // new DataTable('#example');
 </script>
+<script src="./app/category.js"></script>
 
 
 <?php
