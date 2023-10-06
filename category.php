@@ -19,7 +19,7 @@ include_once('./partials/header.php')
                     <a href="#addCategoryModal" class="btn shadow brand_b" data-toggle="modal"><i class="fa fa-plus-circle"></i> Add Category</a>
                 </div>
                 <div class="card-body">
-                <table id="ManageCategoryTable" class="table table-striped table-bordered" style="width:100%">
+                    <table id="ManageCategoryTable" class="table table-striped table-bordered" style="width:100%">
                         <thead>
                             <tr>
                                 <th>SL</th>
@@ -47,7 +47,7 @@ include_once('./partials/header.php')
                 </button>
             </div>
             <div class="modal-body">
-            <div id="add-Category-messages"></div>
+                <div id="add-Category-messages"></div>
                 <form method="post" id="submitCategoryForm" action="./api/category.php">
                     <div class="form-group">
                         <label for="categoryname">Category Name <span class="text-danger">*</span></label>
@@ -58,8 +58,8 @@ include_once('./partials/header.php')
                         <label for="isActive">Category Active <span class="text-danger">*</span></label>
                         <select name="isActive" id="isActive" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <option value="0">Deactive</option>
-                            <option value="1">Active</option>
+                            <option value="1">Available</option>
+                            <option value="0">Not Available</option>
                         </select>
                         <small class="categories_msg"></small>
                     </div>
@@ -67,8 +67,9 @@ include_once('./partials/header.php')
                         <label for="status">Category Status <span class="text-danger">*</span></label>
                         <select name="status" id="status" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <<option value="1">Available</option>
-                                <option value="0">Not Available</option>
+                            <option value="0">Deactive</option>
+                            <option value="1">Active</option>
+
                         </select>
                         <small class="categories_msg"></small>
                     </div>
@@ -88,7 +89,7 @@ include_once('./partials/header.php')
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Edit Category</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -104,8 +105,9 @@ include_once('./partials/header.php')
                         <label for="categories_active">Category Active <span class="text-danger">*</span></label>
                         <select name="categories_active" id="categories_active" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <option value="0">Deactive</option>
-                            <option value="1">Active</option>
+                            <option value="1">Available</option>
+                            <option value="0">Not Available</option>
+
 
                         </select>
                         <small class="categories_active_msg"></small>
@@ -114,8 +116,8 @@ include_once('./partials/header.php')
                         <label for="categories_status">Category Status <span class="text-danger">*</span></label>
                         <select name="categories_status" id="categories_status" class="form-control">
                             <option value="">~~SELECT~~</option>
-                            <option value="0">Available</option>
-                            <option value="1">Not Available</option>
+                            <option value="0">Deactive</option>
+                            <option value="1">Active</option>
                         </select>
                         <small class="categories_status_msg"></small>
                     </div>
@@ -135,7 +137,7 @@ include_once('./partials/header.php')
     <div class="modal-dialog modal-md" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Add Category</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Remove Category</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
