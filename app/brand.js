@@ -123,15 +123,17 @@ function editBrands(BrandId = null) {
                 $(".editBrandFooter").after('<input type="hidden" name="brand_id" id="brand_id" value="' + response.brand_id + '" /> ');
                 //  update brand form
                 $('#editBrandForm').unbind('submit').bind('submit', function () {
+                    // console.log("Check");
                     // remove the error text
                     $(".text-danger").remove();
                     // remove the form error
                     $('.form-group').removeClass('has-error').removeClass('has-success');
                     // get form
                     var form = $(this);
-                    // console.log(form.serialize());
+                    // console.log(form.attr('action'));
                     // submit btn
                     $('#editBrandBtn').button('loading');
+                    // console.log("submiting..");
                     $.ajax({
                         url: form.attr('action'),
                         type: form.attr('method'),

@@ -8,7 +8,7 @@ if($_POST){
     $brandname = $_REQUEST['brandname'];
     $isActive = $_REQUEST['isActive'];
     $status = $_REQUEST['status'];
-    $brandId = $_REQUEST['id'];
+    $id = $_REQUEST['brand_id'];
 
     $sql = "UPDATE brands SET brand_name='$brandname', brand_active ='$isActive', brand_status ='$status' WHERE brand_id = '$id'";
     // chak insert
