@@ -169,7 +169,7 @@ function editBrands(BrandId = null) {
     }
 
 }
-
+// delete Brand
 function removeBrands(BrandId = null) {
     if (BrandId) {
         $('.removeBrandId').remove();
